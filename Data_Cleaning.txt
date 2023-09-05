@@ -1,0 +1,244 @@
+
+
+--DATA CLEANING
+
+
+--Cleaning the BrandNames
+UPDATE SQLChemicalProject.dbo.CosmeticsChemicals
+SET BrandName = 
+CASE 
+		when BrandName = '2015 WINTER COLLECTION' THEN '2015 Winter Collection'
+		when BrandName = 'Alba Bontanica' THEN  'Alba Botanica'
+		when BrandName = 'Alba Bontanica ' THEN  'Alba Botanica'
+		when BrandName = 'Alba Botanica¿½' THEN  'Alba Botanica'
+		when BrandName = 'All Hands¿½' THEN 'All Hands'
+		when BrandName = 'Anastasia Beverly ills' THEN 'Anastasia Beverly Hills'
+		when BrandName = 'Burt¿½ Bees' THEN 'Burt"s Bees'
+		when BrandName = 'CLARINS-PARIS' THEN 'CLARINS PARIS'
+		when BrandName = 'Colorecience' THEN 'Colorescience'
+		when BrandName = 'Colrecience' THEN 'Colorescience'
+		when BrandName = 'Cos.brands,llc' THEN 'Cos. brands,llc'
+		when BrandName = 'Couleurs Nature' THEN 'Couleur Nature'
+		when BrandName = 'Cur¿½' THEN 'Curve'
+		when BrandName = 'Don¿½ Plus' THEN 'Don Plus'
+		when BrandName = 'Dermactin-TS' THEN 'Dermactin TS'
+		when BrandName = 'Dermaquest C-Lipo Clr' THEN 'Dermaquest C-Lipoic Clr'
+		when BrandName = 'Dermaquest Min Powder' THEN 'Dermaquest Mineral Powder'
+		when BrandName = 'Dermaquest Mineral Powders' THEN 'Dermaquest Mineral Powder'
+		when BrandName = 'Dermaquest on the Go' THEN 'Dermaquest on the Go Pwdr'
+		when BrandName = 'Dermaquest Polishing Fac Scrub' THEN 'Dermaquest Polishing Facial Scrub'
+		when BrandName = 'Zo Skiin Health' THEN 'Zo Skin Health'
+		when BrandName = 'Zia Natural Skin care' THEN 'Zia Natural Skincare'
+        	when BrandName = 'WARNER BROS. SUICIDE SQUAD' THEN 'WARNER BROS DC SUICIDE SQUAD' 
+		when BrandName = 'Vital care of North America, Ltd.' THEN 'Vital care of North America Ltd.'
+		when BrandName = 'Victoria"s Secet Beaty' THEN 'Victoria"s Secret Beauty'
+		when BrandName = 'Victoria¿½"s Secet Beaty' THEN 'Victoria"s Secret Beauty'
+		when BrandName = 'Too Faced cosemtics' THEN 'Too Faced cosmetics'
+		when BrandName = 'Too Faced' THEN 'Too Faced Cosmetics'
+		when BrandName = 'Tarte' THEN 'tarte, inc.'
+		when BrandName = 'SuperNail Progel' THEN 'SuperNail Pro Gel'
+		when BrandName = 'Soft and Beautiful' THEN 'Soft & Beautiful'
+		when BrandName = 'Soap and Glory' THEN 'Soap & Glory'
+		when BrandName = 'Smooth "n Shine' THEN 'Smooth N Shine'
+		when BrandName = 'Dr. Hauschka Skin Care' THEN 'Dr. Hauschka Skin Care, Inc.'
+		when BrandName = 'Dr. Hauschka Skin Care inc' THEN 'Dr. Hauschka Skin Care, Inc.'
+		when BrandName = 'Dr. Lewinnn by Kinerase' THEN 'Dr. Lewinn by Kinerase'
+		when BrandName = 'Femm Couture' THEN 'Femme Couture' 
+		when BrandName = 'GUERLAI' THEN 'Guerlain'
+		when BrandName = 'Hallmark Cards' THEN 'Hallmark Cards, Inc.'
+		when BrandName = 'Hallmark' THEN 'Hallmark Cards, Inc.'
+		when BrandName = 'HomeHealth' THEN 'Home Health'
+		when BrandName = 'I love...' THEN 'I Love'
+		when BrandName = 'iN.gredients' THEN 'ingredients'
+		when BrandName = 'iN-gredients' THEN 'ingredients'
+		when BrandName = 'JUST FOR GIRLS' THEN 'Just 4 girls'
+		when BrandName = 'Justin Beiber' THEN 'Justin Bieber'
+		when BrandName = 'Kenra(r) Platinum' THEN 'Kenra (r) Platinum'
+		when BrandName = 'KINGS&QUEENS' THEN 'KINGS & QUEEN'
+		when BrandName = 'LA ROCHE-POSAY' THEN 'LA ROCHE POSAY'
+		when BrandName = 'LBEL' THEN 'L"BEL'
+		when BrandName = 'Lush Manufacturing Ltd' THEN 'Lush Manufacturing Ltd.'
+		when BrandName = 'Morgan Taylor ' THEN 'Morgan Taylor'
+		when BrandName = 'Morgan Tylor' THEN 'Morgan Taylor'
+		when BrandName = 'Nickelodeon SpongBob' THEN 'Nickelodeon SpongeBob'
+		when BrandName = 'Nivea Men' THEN 'Nivea For Men'
+		when BrandName = 'Orly Intl' THEN 'Orly International'
+		when BrandName = 'Parfums Christain Dior' THEN 'Parfums Christian Dior'
+		when BrandName = 'Parfums Chrisitian Dior' THEN 'Parfums Christian Dior'
+                when BrandName = 'PArfums Christian Dior' THEN 'Parfums Christian Dior'
+                when BrandName = 'PARFUMS CHRISTIAN DIOR' THEN 'Parfums Christian Dior'
+		when BrandName = 'Paula"s Choic' THEN 'Paula"s Choice LLC.'
+		when BrandName = 'Peelu' THEN 'Peelu, Inc.'
+		when BrandName = 'Perrcone MD' THEN 'Perricone MD'
+		when BrandName = 'Physicians Formulla' THEN 'Physicians Formula'
+		when BrandName = 'Pinnacle Cosmetic' THEN 'Pinnacle Cosmetics'
+		when BrandName = 'Plaisirs Nature' THEN 'Plaisir Nature'
+		when BrandName = 'PRO¿½LINK¿½' THEN 'ProLinc'
+		when BrandName = 'Provon¿½' THEN 'PROVON'
+		when BrandName = 'PURELL¿½' THEN 'PURELL'
+		when BrandName = 'RE9 ADVANCED¿½ FOR MEN' THEN 'RE9 Advanced for MEN'
+		when BrandName = 'Red Carper Manicure ' THEN 'Red Carper Manicure'
+		when BrandName = 'Renown¿½' THEN 'Renown'
+		when BrandName = 'Rimmel-London' THEN 'Rimmel London'
+		when BrandName = 'Ruby Kiss' THEn 'Ruby Kisses'
+		when BrandName = 'SASSY+CHIC' THEN 'SASSY & CHIC'
+		when BrandName = 'SASSY + CHIC' THEN 'SASSY & CHIC'
+		when BrandName = 'SEBO VEGETAL' THEN 'SEBOVEGETAL'
+		when BrandName = 'Secret AGEent' THEN 'Secret Agent'
+		when BrandName = 'Skin Medica' THEN 'SkinMedica,Inc'
+		when BrandName = 'ABSOLUTE FX' THEN 'Absolute FX'
+		when BrandName = 'ABSOLUTE' THEN 'Absolute FX'
+		when BrandName = 'ACQUA DI PARMA' THEN 'Acqua di Parma'
+                when BrandName ='TRUETOUCH' THEN 'True Touch'
+                when BrandName ='THIERRY MUGLER PARFUMS' THEN 'THIERRY MUGLER'
+		when BrandName = 'Biocosm?tica Exel Argentina' THEN 'Biocosmetica Exel Argentina'
+		 else BrandName
+		END;
+
+
+--check and remove null in chemical column
+SELECT ProductName, BrandName,PrimaryCategory, SubCategory
+FROM SQLChemicalProject.dbo.CosmeticsChemicals
+WHERE BrandName IS NULL
+
+UPDATE SQLChemicalProject.dbo.CosmeticsChemicals
+SET BrandName = ISNULL(BrandName, 'Others')
+WHERE BrandName IS NULL;
+
+
+--Standardize the dates by replacing the old dates column with new ones using same data from the column
+--First Create new columns then populate the new column with the old colmn and finally delete the old column
+--NB:Don't delete the old columns if you are operating strainght from the database original data.
+
+ALTER TABLE SQLChemicalProject.dbo.CosmeticsChemicals
+Add InitialDateReported2 Date,
+MostRecentDateReported2 Date,
+DIscontinuedDate2 Date,
+ChemicalCreatedAt2 Date,
+ChemicalUpdatedAt2 Date,
+ChemicalDateRemoved2 Date;
+
+Update SQLChemicalProject.dbo.CosmeticsChemicals
+SET InitialDateReported2 = CONVERT(Date, InitialDateReported),
+MostRecentDateReported2 = CONVERT(Date, MostRecentDateReported),
+DIscontinuedDate2 = CONVERT(Date, DiscontinuedDate),
+ChemicalCreatedAt2 = CONVERT(Date, ChemicalCreatedAt),
+ChemicalUpdatedAt2 = CONVERT(Date, ChemicalUpdatedAt),
+ChemicalDateRemoved2 = CONVERT(Date, ChemicalDateRemoved);
+
+--Delete old rows and rename the new clean rows as appropriate 
+ALTER TABLE SQLChemicalProject.dbo.CosmeticsChemicals
+ DROP COLUMN InitialDateReported,MostRecentDateReported,DiscontinuedDate, ChemicalCreatedAt,ChemicalUpdatedAt, ChemicalDateRemoved;
+
+--It's observed that Chemicaldremovedate has some 2103, 2104 year needs changes
+UPDATE SQLChemicalProject.dbo.CosmeticsChemicals
+SET
+ChemicalDateRemoved = REPLACE(ChemicalDateRemoved, '2103', '2013')
+
+UPDATE SQLChemicalProject.dbo.CosmeticsChemicals
+SET
+ChemicalDateRemoved = REPLACE(ChemicalDateRemoved, '2104', '2014')
+
+
+
+--Check and remove duplicates---
+--CHECK DUPLICATES, THE ROW NUM>1  SHOWS HOW MANY ARE DUPLICATED---
+Select *,
+ROW_NUMBER () OVER (
+PARTITION BY CDPHId,ProductName, 
+			CasId, BrandName, 
+			PrimaryCategory, SubCategory
+		ORDER BY 
+		CSFId
+		) row_num
+From SQLChemicalProject.dbo.CosmeticsChemicals
+
+
+--The next code Shows only duplicates---
+WITH RowNumCTE AS(
+Select *,
+ROW_NUMBER () OVER (
+PARTITION BY CDPHId,ProductName, 
+			CasId, BrandName, 
+			PrimaryCategory, SubCategory
+		ORDER BY 
+		CSFId
+		) row_num
+From SQLChemicalProject.dbo.CosmeticsChemicals
+)
+Select * 
+From RowNumCTE
+Where row_num > 1
+Order by ProductName
+
+--REMOVE DUPLICATE---(ONLY THIS CAN BE USED STRAIGHT FORWARD WITHOUT THE FIRST CODE, ONLY CTE APPLICATION IS THE DIFFERENCE)
+WITH RowNumCTE AS(
+Select *,
+ROW_NUMBER () OVER (
+PARTITION BY CDPHId,ProductName, 
+			CasId, BrandName, 
+			PrimaryCategory, SubCategory
+		ORDER BY 
+		CSFId
+		) row_num
+From SQLChemicalProject.dbo.CosmeticsChemicals
+)
+Delete 
+From RowNumCTE
+Where row_num > 1
+
+
+
+
+--Now that we are done with the cleaning let,s go to the question.
+--Q1) Find out which chemicals were used the most in cosmetics and personal care products
+Select ChemicalName, Count(ChemicalId) AS Chemical_Used
+From SQLChemicalProject.dbo.CosmeticsChemicals
+Group by ChemicalName
+Order by Chemical_Used DESC
+
+
+
+---Q2) Find out which companies used the most reported chemicals in their cosmetics and personal care products.
+--cosmetics
+
+Select CompanyName, Count(ChemicalId) AS Chemicals_used
+From SQLChemicalProject.dbo.CosmeticsChemicals
+Group by CompanyName
+Order by 2 desc
+
+
+---Q3) Which brands had chemicals that were removed and discontinued? Identify the chemicals.
+Select Distinct(ChemicalName) as Chemicals_Removed, BrandName
+From SQLChemicalProject.dbo.CosmeticsChemicals
+Where ChemicalDateRemoved IS NOT NULL AND DIscontinuedDate IS NOT NULL 
+Order by 2
+
+
+---Q4)  Identify the brands that had chemicals which were mostly reported in 2018.
+Select BrandName, SUM(ChemicalCount) as ChemicalCount
+From SQLChemicalProject.dbo.CosmeticsChemicals
+Where year (InitialDateReported) = 2018
+Group by BrandName, ChemicalCount
+Order by 2 desc
+
+---Q5)	Which brands had chemicals discontinued and removed? 
+Select Distinct BrandName
+From SQLChemicalProject.dbo.CosmeticsChemicals
+Where DiscontinuedDate IS NOT NULL AND ChemicalDateRemoved IS NOT NULL
+
+
+---Q6) Identify the period between the creation of the removed chemicals and when they were actually removed.
+SELECT Chemicalid, BrandName, ChemicalName, ChemicalCreatedAt, ChemicalDateRemoved,
+       DATEDIFF(day,ChemicalCreatedAt, ChemicalDateRemoved) AS Active_Duration_Days
+FROM SQLChemicalProject.dbo.CosmeticsChemicals
+Where ChemicalDateRemoved IS NOT NULL
+GROUP BY Chemicalid, BrandName, ChemicalName, ChemicalCreatedAt, ChemicalDateRemoved
+ORDER BY 6 DESC
+---The data have some chemical that was removed before been created (anomaly)
+
+---Q7)Can you tell if discontinued chemicals in bath products were removed. 
+SELECT Chemicalid, ChemicalName, BrandName, DiscontinuedDate, ChemicalDateRemoved
+FROM SQLChemicalProject.dbo.CosmeticsChemicals
+Where PrimaryCategory ='Bath Products' AND DiscontinuedDate IS NOT NULL
+---Many chemicals discontinued were not removed or not reported to be removed.	

@@ -2,12 +2,16 @@
 ![Intro](https://github.com/Prinzeepule/Cosmetic_Chemicals_Analysis/assets/70212980/fc631681-cf11-4a3c-9b3d-ac50b4fecc7a)
 
 ## Introduction
-This is a project on analysis of the chemical ingredients used in cosmetic and personal care product. The project is to analyze and derived insights to answer crucial questions and help know what chemicals is in your make up bags and how long the chemicals. 
+This is a project on analysis of the chemical ingredients used in cosmetic and personal care product. 
+The project is to analyze and derived insights to answer crucial questions and help know what chemicals is in your make up bags and how long the chemicals. 
 
-** _About this dataset_**: _This dataset contains information on the chemicals used in cosmetics, including the name of the chemical, the company that uses it, the category of the cosmetic it is used in and the date it was reported. The dataset was downloaded from www.kaggle.com._
+** _About this dataset_**: _This dataset contains information on the chemicals used in cosmetics, including the name of the chemical, 
+the company that uses it, the category of the cosmetic it is used in and the date it was reported. The dataset was downloaded from www.kaggle.com._
 
 ## Problem Statement
-Do you ever wonder what ingredients are in your favorite cosmetics? Did you know that there are over 12,000 chemicals used in cosmetics and personal care products? So what's really in your makeup bag? Scroll through and take a look at some of the most popular cosmetics ingredients
+Do you ever wonder what ingredients are in your favorite cosmetics? Did you know that there are over 12,000 chemicals
+used in cosmetics and personal care products? So what's really in your makeup bag? 
+Scroll through and take a look at some of the most popular cosmetics ingredients
 1.	Find out which chemicals were used the most in cosmetics and personal care products.
 2.	Find out which companies used the most reported chemicals in their cosmetics and personal care products.
 3.	Which brands had chemicals that were removed and discontinued? Identify the chemicals.
@@ -25,7 +29,8 @@ Select, Update, Alter, conditional filters, index, Aggregate function, CTE
 #Data cleaning
 There are several dirty data encountered and these are cleaned and prepared for analysis.
 ## _Note_: All the queries used in cleaning can be found in the uploaded "SQL_QUERIES.txt" file.
-The brand name column had many inconsistencies like “Zo Skiin Health” instead of “Zo Skin Health” therefore correcting them using the update statement. 
+The brand name column had many inconsistencies like “Zo Skiin Health” instead of “Zo Skin Health” 
+therefore correcting them using the update statement. 
 
 ![Data Cleaning 3](https://github.com/Prinzeepule/Cosmetic_Chemicals_Analysis/assets/70212980/139f4698-64e4-4a39-a525-1fea148ff5a3)
 
@@ -51,7 +56,8 @@ Before
 After
 ![Data Cleaning Others](https://github.com/Prinzeepule/Cosmetic_Chemicals_Analysis/assets/70212980/95fcfd8b-e42d-4aff-8ee1-50e474eb3079)
 
---Dates are of different standard and I standardized the dates using the Update and CONVERT statement after creating columns to fill them into. 
+--Dates are of different standard and I standardized the dates using the Update and CONVERT statement 
+after creating columns to fill them into. 
 Corrected some dates that was wrongly written like 2103 to 2013.
 
 ![Data Cleaning D1](https://github.com/Prinzeepule/Cosmetic_Chemicals_Analysis/assets/70212980/cca6b8fd-3e1e-4b1f-9dc6-2d6b089df718)
@@ -99,9 +105,12 @@ Q7)Can you tell if discontinued chemicals in bath products were removed.
       
 
 ## Conclusion/Recommendation
-Titanium dioxide is the most used chemical in the cosmetics industries used in 85627 products.
-100 Brands Reported Chemicals In 2018 But Only 13 of them reported above 100; The top 3 namely Zoeva repoerted 1108 Chemicals, Parfums Christian Dior That Reported 680 and Make Up Forever Reporting 308 Chemicals in the year under review. 
-60 Brands Had Chemicals Discontinued And Removed. Many Chemical were discontinued but not removed.
-Chemicals discontinued should be removed as soon as possible and the dates chemicals were created or reintroduced should always be available as this will improve the chemical duration analysis as the case may be.
-Also, it will be good if the importance of each chemical is highlighted which will not only tell us the advantage of each but assist customers in choosing the best product that fits.
+- Titanium dioxide is the most used chemical in the cosmetics industries used in 85627 products.
+- 100 Brands Reported Chemicals In 2018 but Only 13 of them reported above 100; The top 3 namely Zoeva repoerted 1108 Chemicals, 
+Parfums Christian Dior That Reported 680 and Make Up Forever Reporting 308 Chemicals in the year under review. 
+- 60 Brands Had Chemicals Discontinued And Removed. Many Chemical were discontinued but not removed.
+- Chemicals discontinued should be removed as soon as possible and the dates chemicals were created or reintroduced 
+should always be available as this will improve the chemical duration analysis as the case may be.
+- Also, it will be good if the importance of each chemical is highlighted which will not 
+only tell us the advantage of each but assist customers in choosing the best product that fits.
 
